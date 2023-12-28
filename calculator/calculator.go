@@ -43,6 +43,7 @@ func main() {
 	fmt.Print("Enter first number: ")
 	reader.Scan()
 	input, _ := strconv.Atoi(reader.Text())
+	// strconv.Atoi(reader.Text()) is same as strconv.ParseInt(reader.Text(), 10, 0)
 
 	//no 2
 	reader2 := bufio.NewScanner(os.Stdin)
