@@ -1,7 +1,10 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"os"
+	"strconv"
 )
 
 // working with golang calculator
@@ -33,21 +36,37 @@ func division(x, y float64) float64 {
 }
 
 func main() {
-	//// first number
-	// reader := bufio.NewReader(os.Stdin)
-	// fmt.Print("Enter first number: ")
-	// firstNumberInput, _ := reader.ReadString('\n')
-	// firstNumber, _ := strconv.Atoi(firstNumberInput)
+	//bufio method 
 
-	// // get second number
-	// reader2 := bufio.NewReader(os.Stdin)
-	// fmt.Print("Enter second number: ")
-	// secondNumberInput, _ := reader2.ReadString('\n')
-	// secondNumber, _ := strconv.Atoi(secondNumberInput)
+	// no 1
+	reader := bufio.NewScanner(os.Stdin)
+	fmt.Print("Enter first number: ")
+	reader.Scan()
+	input, _ := strconv.Atoi(reader.Text())
+
+	//no 2
+	reader2 := bufio.NewScanner(os.Stdin)
+	fmt.Print("Enter first number: ")
+	reader2.Scan()
+	input2, _ := strconv.Atoi(reader2.Text())
+
+	//logic
+
+	resultAdd2 := addition(input, input2)
+	fmt.Println("resultAdd", resultAdd2)
+
+	resultSubtraction2 := subtraction(float64(input), float64(input2))
+	fmt.Println("resultSubtraction", resultSubtraction2)
+
+	resultMultiplication2 := multiplication(input, input2)
+	fmt.Println("resultMultiplication", resultMultiplication2)
+
+	resultDivision2 := division(float64(input), float64(input2))
+	fmt.Println("resultDivision", resultDivision2)
 
 	/// TRY
 	//! using inbuilt fmt package use Scan and store to the int variable defined
-	
+
 	//define variables
 	var firstNumber int
 	var secondNumber int
