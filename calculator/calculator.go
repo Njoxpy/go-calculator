@@ -51,8 +51,29 @@ func main() {
 	reader2.Scan()
 	input2, _ := strconv.Atoi(reader2.Text())
 
-	//logic
+	var operator string
 
+	fmt.Print("Enter operator (+, -, *, /): ")
+	fmt.Scan(&operator)
+
+	switch(operator){
+	case "+":
+		resultAdd2 := addition(input, input2)
+		fmt.Println("resultAdd", resultAdd2)
+	case "-":
+		resultSubtraction2 := subtraction(float64(input), float64(input2))
+	    fmt.Println("resultSubtraction", resultSubtraction2)
+	case "*":
+		resultMultiplication2 := multiplication(input, input2)
+	    fmt.Println("resultMultiplication", resultMultiplication2)
+	case "/":
+		resultDivision2 := division(float64(input), float64(input2))
+	    fmt.Println("resultDivision", resultDivision2)
+	}
+	
+
+	//logic
+/*
 	resultAdd2 := addition(input, input2)
 	fmt.Println("resultAdd", resultAdd2)
 
@@ -89,4 +110,6 @@ func main() {
 
 	resultDivision := division(float64(firstNumber), float64(secondNumber))
 	fmt.Println("resultDivision", resultDivision)
+
+ */
 }
