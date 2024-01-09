@@ -69,6 +69,8 @@ func main() {
 	case "/":
 		resultDivision2 := division(float64(input), float64(input2))
 	    fmt.Println("resultDivision", resultDivision2)
+	default:
+		fmt.Println("Incorrect operator type")
 	}
 	
 
