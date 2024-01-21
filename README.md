@@ -33,3 +33,5 @@ This is a simple calculator program written in Go that performs arithmetic.
 ### Contributing
 
 If you'd like to contribute to this project, feel free to submit a pull request or open an issue.
+
+[Code explanation](https://medium.com/@godblessnyagawa/golang-calculator-b0dd141179f3)
