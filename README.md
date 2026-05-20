@@ -14,14 +14,12 @@ This is a simple calculator program written in Go that performs arithmetic.
 
    ```bash
    git clone https://github.com/Njoxpy/go-calculator
-
    ```
 
 2. Navigate to the "calculator" folder:
 
    ```bash
    cd calculator
-
    ```
 
 3. Run the program:

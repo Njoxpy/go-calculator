@@ -36,18 +36,15 @@ func division(x, y float64) float64 {
 }
 
 func main() {
-	//bufio method 
 
-	// no 1
 	reader := bufio.NewScanner(os.Stdin)
 	fmt.Print("Enter first number: ")
 	reader.Scan()
 	input, _ := strconv.Atoi(reader.Text())
 	// strconv.Atoi(reader.Text()) is same as strconv.ParseInt(reader.Text(), 10, 0)
 
-	//no 2
 	reader2 := bufio.NewScanner(os.Stdin)
-	fmt.Print("Enter first number: ")
+	fmt.Print("Enter second number: ")
 	reader2.Scan()
 	input2, _ := strconv.Atoi(reader2.Text())
 
@@ -56,62 +53,21 @@ func main() {
 	fmt.Print("Enter operator (+, -, *, /): ")
 	fmt.Scan(&operator)
 
-	switch(operator){
+	switch operator {
 	case "+":
 		resultAdd2 := addition(input, input2)
-		fmt.Println("resultAdd", resultAdd2)
+		fmt.Println("results after addition: ", resultAdd2)
 	case "-":
 		resultSubtraction2 := subtraction(float64(input), float64(input2))
-	    fmt.Println("resultSubtraction", resultSubtraction2)
+		fmt.Println("results after subtraction: ", resultSubtraction2)
 	case "*":
 		resultMultiplication2 := multiplication(input, input2)
-	    fmt.Println("resultMultiplication", resultMultiplication2)
+		fmt.Println("results after multiplication: ", resultMultiplication2)
 	case "/":
 		resultDivision2 := division(float64(input), float64(input2))
-	    fmt.Println("resultDivision", resultDivision2)
+		fmt.Println("results after division: ", resultDivision2)
 	default:
 		fmt.Println("Incorrect operator type")
 	}
-	
 
-	//logic
-/*
-	resultAdd2 := addition(input, input2)
-	fmt.Println("resultAdd", resultAdd2)
-
-	resultSubtraction2 := subtraction(float64(input), float64(input2))
-	fmt.Println("resultSubtraction", resultSubtraction2)
-
-	resultMultiplication2 := multiplication(input, input2)
-	fmt.Println("resultMultiplication", resultMultiplication2)
-
-	resultDivision2 := division(float64(input), float64(input2))
-	fmt.Println("resultDivision", resultDivision2)
-
-	/// TRY
-	//! using inbuilt fmt package use Scan and store to the int variable defined
-
-	//define variables
-	var firstNumber int
-	var secondNumber int
-
-	//scan
-	fmt.Print("Enter first number: ")
-	fmt.Scan(&firstNumber)
-	fmt.Print("Enter second number: ")
-	fmt.Scan(&secondNumber)
-
-	resultAdd := addition(firstNumber, secondNumber)
-	fmt.Println("resultAdd", resultAdd)
-
-	resultSubtraction := subtraction(float64(firstNumber), float64(secondNumber))
-	fmt.Println("resultSubtraction", resultSubtraction)
-
-	resultMultiplication := multiplication(firstNumber, secondNumber)
-	fmt.Println("resultMultiplication", resultMultiplication)
-
-	resultDivision := division(float64(firstNumber), float64(secondNumber))
-	fmt.Println("resultDivision", resultDivision)
-
- */
 }
